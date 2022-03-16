@@ -27,3 +27,10 @@ $ docker run -d \
     -p 8006:8000 \
     -e "SECRET_KEY=please_change_me" -e "DEBUG=1" -e "DJANGO_ALLOWED_HOSTS=*" \
     hello_django python /usr/src/app/manage.py runserver 0.0.0.0:8000
+
+
+
+
+for production
+docker-compose -f docker-compose.prod.yml up -d --build
+docker-compose -f docker-compose.prod.yml logs -f
